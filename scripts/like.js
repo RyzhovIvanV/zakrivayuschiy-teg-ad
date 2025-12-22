@@ -20,17 +20,9 @@ function toggleIsLiked(heart, button) {
 }
 
 function setButtonText(heart, button) {
-  if (heart.classList.contains('is-liked')) {
-    setTimeout(() => {
-      button.querySelector('.button__text').textContent = 'Unlike';
-    }, 500);
-  } else {
-    setTimeout(() => {
-      button.querySelector('.button__text').textContent = 'Like';
-    }, 500);
-  }
+  const text = heart.classList.contains('is-liked') ? 'Unlike' : 'Like';
+  button.querySelector('.button__text').textContent = text;
 }
-
 
 const saveButton = document.querySelector('.button-remember');
 const dialog = document.querySelector('#dialog-id');
