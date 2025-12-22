@@ -31,12 +31,13 @@ function setButtonText(heart, button) {
   }
 }
 
+
 const saveButton = document.querySelector('.button-remember');
 const dialog = document.querySelector('#dialog-id');
 const dialogClose = dialog.querySelector('.button-save');
 
 saveButton.addEventListener('click', (e) => {
-  e.preventDefault(); 
+  e.preventDefault();
   dialog.showModal();
 });
 
